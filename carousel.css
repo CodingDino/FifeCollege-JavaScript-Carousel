@@ -1,17 +1,10 @@
+* {box-sizing:border-box}
+
 /* Slideshow container */
 .slideshow-container {
+    max-width: 1000px;
     position: relative;
-    
-    /* style stuff (optional) */
-    background: #f1f1f1f1;
-}
-
-/* Slides */
-.slide {
-    padding: 80px;
-    
-    /* style stuff (optional) */
-    text-align: center;
+    margin: auto;
 }
 
 /* Next & previous buttons */
@@ -21,11 +14,25 @@
     padding: 16px;
     
     /* style stuff (optional) */
+    color: white;
     user-select: none;
     cursor: pointer;
-    color: #888;
     font-weight: bold;
     font-size: 20px;
+    transition: 0.6s ease;
+}
+
+/* Caption text */
+.caption {
+  color: #f2f2f2;
+  position: absolute;
+  bottom: 8px;
+    
+    /* style stuff (optional) */
+  text-align: center;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 20px;
 }
 
 /* Position the "prev" button to the left */
@@ -73,8 +80,21 @@
     background-color: #717171;
 }
 
-/* Add an italic font style to all quotes (optional) */
-q {font-style: italic;}
 
-/* Add a blue color to the author (optional) */
-.author {color: cornflowerblue;}
+/* Fading animation (optional) */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
